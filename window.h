@@ -13,6 +13,7 @@ namespace invader
 			~window();
 
 			SDL_Surface*	getScreen();
+			void		resetScreen();
 		private:
 			SDL_Surface*	screen;
 	};

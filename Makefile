@@ -6,7 +6,9 @@ SRC		=	main.cpp	\
 			window.cpp	\
 			intro.cpp	\
 			surface.cpp	\
-			timer.cpp
+			timer.cpp	\
+			game.cpp	\
+			ship.cpp
 OBJ		=	$(SRC:.cpp=.o)
 LDFLAGS		=	-lSDL -lSDL_image -lSDL_ttf -g3
 

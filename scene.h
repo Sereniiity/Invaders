@@ -3,7 +3,6 @@
 
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
-#include <SDL/SDL_ttf.h>
 #include <iostream>
 
 namespace invader
@@ -11,6 +10,7 @@ namespace invader
 
 	class window;
 	class intro;
+	class game;
 
 	class scene
 	{
@@ -23,6 +23,7 @@ namespace invader
 		private:
 			window*	w;
 			intro*	i;
+			game*	g;
 	};
 };
 

@@ -1,5 +1,4 @@
 #include "intro.h"
-#include "stdlib.h"
 
 namespace invader
 {
@@ -36,24 +35,24 @@ int	intro::run_intro(window* w)
 				default:break;
 			}
 		}
-		if (this->t->get_ticks() > 1000 && this->t->get_ticks() < 2000)
+		if (this->t->get_ticks() > 500 && this->t->get_ticks() < 1000)
 		{
 			if (this->tab_surf[3].blitImage(w) == -1)
 				return -1;
 		}
-		else if (this->t->get_ticks() > 2000 && this->t->get_ticks() < 3000)
+		else if (this->t->get_ticks() > 1000 && this->t->get_ticks() < 1500)
 		{
 			this->tab_surf[3].setPos(365, 72);
 			if (this->tab_surf[3].blitImage(w) == -1)
 				return -1;
 		}
-		else if (this->t->get_ticks() > 3000 && this->t->get_ticks() < 4000)
+		else if (this->t->get_ticks() > 1500 && this->t->get_ticks() < 2000)
 		{
 			this->tab_surf[3].setPos(432, 72);
 			if (this->tab_surf[3].blitImage(w) == -1)
 				return -1;
 		}
-		else if (this->t->get_ticks() > 4000)
+		else if (this->t->get_ticks() > 2000)
 		{
 			keepgoing = 0;
 		}
