@@ -2,10 +2,11 @@ CXX		=	g++-4.8
 CXXFLAGS	=	-W -Wall -Werror -Wextra -std=c++11
 NAME		=	id_invader
 SRC		=	main.cpp	\
-			system.cpp	\
+			scene.cpp	\
 			window.cpp	\
+			intro.cpp	\
 			surface.cpp	\
-			event.cpp
+			timer.cpp
 OBJ		=	$(SRC:.cpp=.o)
 LDFLAGS		=	-lSDL -lSDL_image -lSDL_ttf -g3
 

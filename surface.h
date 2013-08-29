@@ -5,6 +5,7 @@
 #include <SDL/SDL_image.h>
 #include <SDL/SDL_ttf.h>
 #include <string>
+
 #include "window.h"
 
 struct	text_p
@@ -19,15 +20,16 @@ struct	img_p
 	SDL_Rect	clip;
 };
 
-namespace mysdl
+namespace invader
 {
+
+	class window;
+
 	class	surface
 	{
 		public:
 			surface();
-			surface(const surface & s);
-			surface& operator=(const surface & s);
-			virtual ~surface();
+			~surface();
 
 			int	loadImage(std::string filename);
 			int	loadText(std::string msg, int size, int red, int green, int blue, int alpha);

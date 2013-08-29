@@ -1,22 +1,13 @@
 #include "window.h"
 
-namespace mysdl
+namespace invader
 {
 
 window::window()
 {
 	this->screen = SDL_SetVideoMode(800, 600, 32, SDL_HWSURFACE);
+	SDL_WM_SetCaption("Space Invaders", nullptr);
 	SDL_Flip(screen);
-}
-
-window::window(const window & w)
-{
-	(void) w;
-}
-
-window&	window::operator=(const window &)
-{
-	return (*this);
 }
 
 window::~window()

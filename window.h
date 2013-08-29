@@ -4,17 +4,14 @@
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
 
-namespace mysdl
+namespace invader
 {
 	class window
 	{
 		public:
 			window();
-			window(const window & w);
-			window& operator=(const window & w);
-			virtual ~window();
+			~window();
 
-			void		pause();
 			SDL_Surface*	getScreen();
 		private:
 			SDL_Surface*	screen;

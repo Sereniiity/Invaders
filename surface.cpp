@@ -1,7 +1,6 @@
 #include "surface.h"
-#include "window.h"
 
-namespace mysdl
+namespace invader
 {
 
 int	surface::loadImage(std::string filename)
@@ -76,16 +75,6 @@ int	surface::blitRGB(window* w)
 
 surface::surface()
 {
-}
-
-surface::surface(const surface & s)
-{
-	(void) s;
-}
-
-surface&	surface::operator=(const surface &)
-{
-	return (*this);
 }
 
 surface::~surface()
