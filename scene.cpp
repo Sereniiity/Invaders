@@ -14,11 +14,9 @@ int	scene::run()
 	if (this->i->run_intro(this->w) == -1)
 		return -1;
 
-	this->w->resetScreen();
-
-//Jeu
 	if (this->g->init_game() == -1)
 		return -1;
+	this->w->resetScreen();
 	if (this->g->run_game(this->w) == -1)
 		return -1;
 

@@ -46,7 +46,7 @@ int	ship::init_ship()
 	this->surf->setPos(380, 500);
 	this->surf->setClip(102, 51, 40, 24);
 	this->life = 1;
-	this->pos[0] = 377;
+	this->pos[0] = 380;
 	this->pos[1] = 500;
 
 	return 0;
