@@ -7,6 +7,7 @@
 namespace invader
 {
 	class surface;
+	class window;
 
 	class ship
 	{
@@ -15,8 +16,14 @@ namespace invader
 			~ship();
 
 			int	init_ship();
+			int	blit_ship(window* w);
+			void	udapte(int move);
 		private:
 			surface*	surf;
+			int		life;
+			int		speedmove;
+			int		speedshot;
+			int*		pos;
 	};
 };
 

@@ -3,6 +3,11 @@
 namespace invader
 {
 
+void	surface::SetColorKey(int r, int g, int b)
+{
+	SDL_SetColorKey(this->img->surf, SDL_RLEACCEL | SDL_SRCCOLORKEY, SDL_MapRGB(this->img->surf->format, r, g, b));
+}
+
 int	surface::loadImage(std::string filename)
 {
 	this->img = new(std::nothrow) img_p;

@@ -1,9 +1,21 @@
 #include "game.h"
 #include "surface.h"
 #include "ship.h"
+#include "stdlib.h"
 
 namespace invader
 {
+
+int	game::blitGame(window* w)
+{
+	
+	if (this->surf->blitImage(w) == -1)
+		return -1;
+	if (this->s->blit_ship(w) == -1)
+		return -1;
+
+	return 0;
+}
 
 int	game::run_game(window* w)
 {
@@ -12,9 +24,12 @@ int	game::run_game(window* w)
 
 	if (this->surf->blitImage(w) == -1)
 		return -1;
+	if (this->s->blit_ship(w) == -1)
+		return -1;
 
 	SDL_Flip(w->getScreen());
 
+	SDL_EnableKeyRepeat(5, 5);
 	while (keepgoing)
 	{
 		if (SDL_WaitEvent(&ev))
@@ -24,8 +39,22 @@ int	game::run_game(window* w)
 				case SDL_QUIT:
 					keepgoing = 0;
 					break;
+				case SDL_KEYDOWN:
+					switch (ev.key.keysym.sym)
+					{
+						;case SDLK_RIGHT:
+							this->s->udapte(1);
+							break;
+						case SDLK_LEFT:
+							this->s->udapte(2);
+							break;
+						default:break;
+					}
+					break;
 				default:break;
 			}
+			if (this->blitGame(w) == -1)
+				return -1;
 		}
 		SDL_Flip(w->getScreen());
 	}

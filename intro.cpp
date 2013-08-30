@@ -32,6 +32,7 @@ int	intro::run_intro(window* w)
 							break;
 						default:break;
 					}
+					break;
 				default:break;
 			}
 		}
@@ -85,7 +86,7 @@ int	intro::init_tab_surf()
 		return -1;
 	if (this->tab_surf[2].loadImage("graphics/Intro2.jpg") == -1)
 		return -1;
-	if (this->tab_surf[3].loadImage("graphics/invader.png") == -1)
+	if (this->tab_surf[3].loadImage("graphics/invaders.png") == -1)
 		return -1;
 	return 0;
 }

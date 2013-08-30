@@ -17,6 +17,7 @@ namespace invader
 			game();
 			~game();
 
+			int	blitGame(window* w);
 			int	run_game(window* w);
 			int	init_ship();
 			int	init_background();

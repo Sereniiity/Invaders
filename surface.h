@@ -39,6 +39,7 @@ namespace invader
 			int	blitImage(window* w);
 			int	blitText(window* w);
 			int	blitRGB(window* w);
+			void	SetColorKey(int r, int g, int b);
 		private:
 			SDL_Rect	pos;
 			text_p*		text;
