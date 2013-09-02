@@ -16,14 +16,16 @@ namespace invader
 			~ennemy();
 
 			int	init_ennemy(int count);
-			int	blit_ennemy(window* w);
-			void	udapte();
+			int	blit_ennemy(window* w, int anim);
+			void	udapte(int);
+			int	check_direction(int direction);
 		private:
 			surface*	surf;
 			int		life;
 			int		speedmove;
 			int		speedshot;
 			int*		pos;
+			int		old_dir;
 	};
 };
 

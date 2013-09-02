@@ -9,7 +9,8 @@ SRC		=	main.cpp	\
 			timer.cpp	\
 			game.cpp	\
 			ship.cpp	\
-			ennemy.cpp
+			ennemy.cpp	\
+			missile.cpp
 OBJ		=	$(SRC:.cpp=.o)
 LDFLAGS		=	-lSDL -lSDL_image -lSDL_ttf -g3
 

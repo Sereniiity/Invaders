@@ -67,7 +67,7 @@ void	intro::init_clip_surf()
 {
 	this->tab_surf[1].setClip(0, 0, 200, 74);
 	this->tab_surf[2].setClip(288, 168, 278, 156);
-	this->tab_surf[3].setClip(339, 4, 57, 41);
+	this->tab_surf[3].setClip(329, 4, 57, 41);
 }
 
 void	intro::init_pos_surf()

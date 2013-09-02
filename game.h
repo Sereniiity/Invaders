@@ -12,6 +12,7 @@ namespace invader
 	class ship;
 	class ennemy;
 	class timer;
+	class missile;
 
 	class game
 	{
@@ -19,8 +20,9 @@ namespace invader
 			game();
 			~game();
 
-			int	blitGame(window* w);
+			int	blitGame(window* w, int anim);
 			int	run_game(window* w);
+			int	init_missile();
 			int	init_ship();
 			int	init_ennemy();
 			int	init_background();
@@ -30,6 +32,7 @@ namespace invader
 			ship*		s;
 			ennemy*		e;
 			timer*		t;
+			missile*	m;
 	};
 };
 
